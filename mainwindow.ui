@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(220, 147, 1);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
@@ -36,6 +39,9 @@
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Papier - Kamień - Nożyce</string>
@@ -70,6 +76,18 @@
           <height>145</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI Black</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 41);
+color: rgb(0, 0, 0);</string>
+        </property>
         <property name="text">
          <string>Papier</string>
         </property>
@@ -83,6 +101,18 @@
           <height>145</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI Black</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 41);
+color: rgb(0, 0, 0);</string>
+        </property>
         <property name="text">
          <string>Kamień</string>
         </property>
@@ -95,6 +125,18 @@
           <width>117</width>
           <height>145</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI Black</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 41);
+color: rgb(0, 0, 0);</string>
         </property>
         <property name="text">
          <string>Nożyce</string>
