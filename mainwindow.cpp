@@ -63,16 +63,15 @@ void MainWindow::gra(int g) // g - wybór gracza
         QMessageBox::information(this, "Remis!", "Komputer wybrał to samo co ty", QMessageBox::Ok);
     }
 
-    ui->Papier->setEnabled(1);
-    ui->Kamien->setEnabled(1);
-    ui->Nozyce->setEnabled(1);
+    ui->Papier->setStyleSheet("background-color: rgb(255, 255, 41)");
+    ui->Kamien->setStyleSheet("background-color: rgb(255, 255, 41)");
+    ui->Nozyce->setStyleSheet("background-color: rgb(255, 255, 41)");
 }
 
 void MainWindow::on_Papier_clicked()
 {
     gracz = papier;
-    ui->Kamien->setDisabled(1);
-    ui->Nozyce->setDisabled(1);
+    ui->Papier->setStyleSheet("background-color: red");
     losowanie();
     gra(gracz);
 }
@@ -80,8 +79,7 @@ void MainWindow::on_Papier_clicked()
 void MainWindow::on_Kamien_clicked()
 {
     gracz = kamien;
-    ui->Papier->setDisabled(1);
-    ui->Nozyce->setDisabled(1);
+    ui->Kamien->setStyleSheet("background-color: red");
     losowanie();
     gra(gracz);
 }
@@ -89,8 +87,7 @@ void MainWindow::on_Kamien_clicked()
 void MainWindow::on_Nozyce_clicked()
 {
     gracz = nozycze;
-    ui->Papier->setDisabled(1);
-    ui->Kamien->setDisabled(1);
+    ui->Nozyce->setStyleSheet("background-color: red");
     losowanie();
     gra(gracz);
 }
