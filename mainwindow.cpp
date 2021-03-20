@@ -66,6 +66,8 @@ void MainWindow::gra(int g) // g - wybór gracza
     ui->Papier->setStyleSheet("background-color: rgb(255, 255, 41)");
     ui->Kamien->setStyleSheet("background-color: rgb(255, 255, 41)");
     ui->Nozyce->setStyleSheet("background-color: rgb(255, 255, 41)");
+
+    ui->wynik->setText(QString::number(Pgracz) + ":" + QString::number(Pkomputer));
 }
 
 void MainWindow::on_Papier_clicked()
@@ -91,3 +93,5 @@ void MainWindow::on_Nozyce_clicked()
     losowanie();
     gra(gracz);
 }
+
+
