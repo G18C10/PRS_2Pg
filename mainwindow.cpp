@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     Pgracz = 0;
     Pkomputer = 0;
+    runda = 1;
 }
 
 MainWindow::~MainWindow()
@@ -20,15 +21,15 @@ void MainWindow::losowanie()
     komputer = QRandomGenerator::global()->bounded(3);
     if(komputer == 0)
     {
-        nazwa = "papier";
+        nazwaK = "papier";
     }
     else if(komputer == 1)
     {
-        nazwa = "kamień";
+        nazwaK = "kamień";
     }
     else
     {
-        nazwa = "nożycze";
+        nazwaK = "nożycze";
     }
 }
 
@@ -51,12 +52,12 @@ void MainWindow::gra(int g) // g - wybór gracza
     if(wynik == 1)
     {
         Pgracz++;
-        QMessageBox::information(this, "Wygrałeś!", "Komputer wybrał " + nazwa, QMessageBox::Ok);
+        QMessageBox::information(this, "Wygrałeś!", "Komputer wybrał " + nazwaK, QMessageBox::Ok);
     }
     else if(wynik == 2)
     {
         Pkomputer++;
-        QMessageBox::information(this, "Przegrałeś!", "Komputer wybrał " + nazwa, QMessageBox::Ok);
+        QMessageBox::information(this, "Przegrałeś!", "Komputer wybrał " + nazwaK, QMessageBox::Ok);
     }
     else
     {
@@ -68,12 +69,15 @@ void MainWindow::gra(int g) // g - wybór gracza
     ui->Nozyce->setStyleSheet("background-color: rgb(255, 255, 41)");
 
     ui->wynik->setText(QString::number(Pgracz) + ":" + QString::number(Pkomputer));
+    ui->historia->setPlainText(ui->historia->toPlainText() + "Runda " + QString::number(runda) + ": gracz - [" + nazwaG + "] | komputer - [" + nazwaK + "]\n");
+    runda++;
 }
 
 void MainWindow::on_Papier_clicked()
 {
     gracz = papier;
     ui->Papier->setStyleSheet("background-color: red");
+    nazwaG = "papier";
     losowanie();
     gra(gracz);
 }
@@ -82,6 +86,7 @@ void MainWindow::on_Kamien_clicked()
 {
     gracz = kamien;
     ui->Kamien->setStyleSheet("background-color: red");
+    nazwaG = "kamień";
     losowanie();
     gra(gracz);
 }
@@ -90,6 +95,7 @@ void MainWindow::on_Nozyce_clicked()
 {
     gracz = nozycze;
     ui->Nozyce->setStyleSheet("background-color: red");
+    nazwaG = "nożycze";
     losowanie();
     gra(gracz);
 }

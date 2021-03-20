@@ -26,7 +26,9 @@ public:
     int wynik; // 3 stany, 0 - remis, 1 - wygrał gracz, 2 - wygrał komputer
     int Pgracz; // punkty gracza
     int Pkomputer; // punkty komputera
-    QString nazwa;
+    int runda;
+    QString nazwaK;
+    QString nazwaG;
 
     void losowanie();
 
