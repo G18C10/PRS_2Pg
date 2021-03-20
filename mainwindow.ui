@@ -21,7 +21,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">
-background-color: rgb(130, 130, 130);</string>
+background-color: rgb(98, 98, 98);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -67,7 +68,7 @@ background-color: rgb(130, 130, 130);</string>
        <number>0</number>
       </property>
       <property name="bottomMargin">
-       <number>120</number>
+       <number>0</number>
       </property>
       <item>
        <widget class="QPushButton" name="Papier">
@@ -147,6 +148,9 @@ color: rgb(0, 0, 0);</string>
      </layout>
     </item>
     <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+    </item>
+    <item>
      <widget class="QLabel" name="label_2">
       <property name="font">
        <font>
@@ -155,6 +159,9 @@ color: rgb(0, 0, 0);</string>
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>G:K</string>
@@ -174,6 +181,9 @@ color: rgb(0, 0, 0);</string>
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
       <property name="text">
        <string>0:0</string>
       </property>
@@ -191,6 +201,9 @@ color: rgb(0, 0, 0);</string>
         <weight>75</weight>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>HISTORIA:</string>
@@ -220,7 +233,7 @@ color: rgb(0, 0, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>420</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
